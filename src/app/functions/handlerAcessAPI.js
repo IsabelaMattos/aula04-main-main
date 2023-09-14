@@ -23,15 +23,15 @@ const lista=[{
 
 const getUserAuthenticated = (user) => {
     let listaUser = {}
-    usuarios.map ((usuarios => {
-        if(user.email == usuarios.email && user.password == usuarios.password){
-            listaUser = usuarios;
+    lista.map ((lista => {
+        if(lista.email == lista.email && lista.password == lista.password){
+            listaUser = lista;
         }
     }))
     return listaUser;
 }
 
 const getUsers = () =>{
-        return usuarios;
+        return lista;
 }
 export { getUsers, getUserAuthenticated };
