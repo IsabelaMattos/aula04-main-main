@@ -19,12 +19,20 @@ const lista=[{
     password:'123',
     email:'bruna@gmail.com',
     token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
+},
+
+{
+    name:'Vini',
+    password:'123',
+    email:'vini@gmail.com',
+    token:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
 }]
 
 const getUserAuthenticated = (user) => {
-    let listaUser = {}
+    let listaUser = {};
+
     lista.map ((lista => {
-        if(lista.email == lista.email && lista.password == lista.password){
+        if(lista.email === lista.email & lista.password === lista.password){
             listaUser = lista;
         }
     }))
