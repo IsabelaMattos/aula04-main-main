@@ -17,12 +17,11 @@ export default function Login() {
     try {
       const userAuth = await handlerAcessUser(user);
       if(userAuth.token === undefined){
-        toast.error("Erro no e-mail ou senha!");
+        toast.error("Erro no e-mail ou senha, verifique por favor!");
       }
       push('/pages/dashboard');
-
     } catch {
-      toast.error("Erro na aplicação");
+      refresh();
     }
   }
   return (
@@ -43,5 +42,5 @@ export default function Login() {
       </form>
       <ToastContainer />
     </div>
-  )
+  );
 }
