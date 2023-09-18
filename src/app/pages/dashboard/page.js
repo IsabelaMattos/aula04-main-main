@@ -1,17 +1,18 @@
 import { getUsers } from "@/app/functions/handlerAcessAPI";
-import { Suspense } from "react";
-import Listar from "@/app/componentes/listar";
+import Navbar from "@/app/componentes/navbar";
+import '../css/home.css'
 
-export default async function Dashboard() {
+export default function Dashboard() {
    
     const users = getUsers
     return (
         <div>
-        <Suspense fallback={<p> Carregando</p>}>
-            <Listar users={users}/>
-            <button><a href="/pages/alterar">Alterar</a></button>
-            <button><a href="/pages/registrar">Registrar</a></button>
-        </Suspense>
+             <Navbar/>
+            {users?.map((user, index) =>
+            <div key={index}>
+                <h1>{user.name} {user.password}</h1>
+            </div>    
+            )} 
         </div>
       
     );

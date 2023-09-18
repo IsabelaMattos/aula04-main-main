@@ -1,7 +1,7 @@
 'use client'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Navbar from "@/app/components/navbar";
+import Navbar from "@/app/componentes/navbar";
 import '../css/alterar.css'
 
 export default function Alterar() {
