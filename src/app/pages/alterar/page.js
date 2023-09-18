@@ -1,37 +1,37 @@
 'use client'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from "@/app/components/navbar";
+import '../css/alterar.css'
 
-const form = () => {
-
-  const handlerLogin = async (e) => {
+export default function Alterar() {
+  function alterar (e) {
     e.preventDefault();
-        toast.error("Alterado com sucesso");
-      }
+    toast.sucess("Funcionando ;)");
+  }
+
   return (
     <div>
-      <h1>Login</h1>
-      <form onSubmit={handlerLogin}>
-      <input
-          placeholder='Nome'
-          type="nome"
-       >
-        </input>
-        <input
-          placeholder='E-mail'
-          type="email"
-        >
-        </input>
-        <input
-          placeholder='Senha'
-          type='password'
-         >
-        </input>
-        <button>Entrar</button>
+      <Navbar/>
+      <form onSubmit={alterar}>
+        <div className="texto">
+          <div class="input-box">
+            <i>Nome</i>
+            <input type="name" required/>
+          </div>
+          <div class="input-box">
+            <i>Email</i>
+            <input type="email" required/>
+          </div>
+          <div class="input-box">
+            <i>Senha</i>
+            <input type="password" required/>
+          </div>
+          <br/><br/>
+          <button className="btn">Alterar</button>
+        </div>
       </form>
       <ToastContainer />
     </div>
-  )
-};
-
-export default form;
+  );
+}
